@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <title>Document</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+  <section class="page">
+    <nav class="main_nav">
+      <strong href="" id="logo">Pick&Hook</strong>
+      <div>
+        <a href="">New Escorts</a>
+        <a href="">Premium Ads.</a>
+        <a href="">Contact Us </a>
+      </div>
+      <a href="" id="register_a">Register For free</a>
+
+      <i class="material-symbols-outlined" id="menu_tag">menu</i>
+    </nav>
+    <section class="intro_box">
+      <div class="intro_box_right">
+        <div class="intro_box_right_swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(mandy-muse-1920x1080.jpg)">
+              <a href="">
+                <strong>Mandy Muse</strong>
+                <span> <i class="material-symbols-outlined">location_on</i>  Kumasi</span>
+                <div></div>
+              </a>
+            </div>
+            <div class="swiper-slide" style="background-image: url(law_pro2.jpeg)">
+              <a href="">
+                <strong>Sandra</strong>
+                <span> <i class="material-symbols-outlined">location_on</i>  Accra</span>
+                <div></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <script>
+        var intro_box_right_swiper = new Swiper('.intro_box_right_swiper', {
+          loop: true,
+          speed: 1500,
+          autoplay:{
+            delay:3500
+          },
+          pagination: {
+            el: '.swiper-pagination',
+          },
+        });
+        intro_box_right_swiper.el.style.zIndex = 1
+      </script>
+
+      <div class="intro_box_left">
+        <strong href="" id="logo" class="logo_2">Pick&Hook</strong>
+        <p style="font-family: 'Alegreya Sans SC', sans-serif !important;">Your Top Escort Agency</p> 
+        <a>Create A free Escort Profile Today</a>
+      </div>
+      <form>
+        <section>
+          <div class="input_field">
+            <span>Region</span>
+            <select name="" id="">
+              <option value="">Accra</option>
+              <option value="">Kumasi</option>
+            </select>
+          </div>
+          <div class="input_field">
+            <span>Club</span>
+            <select name="" id="">
+              <option value="">All</option>
+              <option value="">Independants</option>
+              <option value="">Agencies</option>
+            </select>
+          </div>
+          <div class="input_field">
+            <span>Class</span>
+            <select name="" id="">
+              <option value="">All</option>
+              <option value="">Regular</option>
+              <option value="">Premium</option>
+            </select>
+          </div>
+        </section>
+        <button>
+          <strong>Hook</strong>
+          <i class="material-symbols-outlined">phishing</i>
+        </button>
+      </form>
+
+      
+      <style>
+        .intro_box form{
+          width: 60%;
+          min-height: 20vh;
+          z-index: 10;
+          background: white;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: 10px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          position: absolute;
+          bottom: -10vh;
+        }
+        .intro_box form section{
+          display: flex;
+          justify-content: space-around;
+          width: 80%;
+          /* border: 1px solid black; */
+        }
+        .intro_box form .input_field{
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          padding: 0 10px;
+          /* border: 1px solid black; */
+        }
+        .intro_box form .input_field span{
+          font-size: 1.1rem;
+          /* font-weight: 600; */
+        }
+        .intro_box form .input_field select{
+          color: #989494;
+          font-size: 1.1rem;
+        }
+        .intro_box form button{
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          background: palevioletred;
+          color: wheat;
+          font-size: 2rem;
+          height: 20vh;
+          border-radius: 0 10px 10px 0;
+          padding: 0 20px;
+        }
+      </style>
+    </section>
+  </section>
+
+  <script>
+    const main_nav = document.querySelector('.main_nav')
+    const menu_tag = document.getElementById('menu_tag')
+    menu_tag.onclick =()=>{
+      main_nav.classList.toggle('change')
+    }
+  </script>
+</body>
+</html>
+
+<style>
+  .main_nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background: black; */
+    width: 90%;
+    padding: 0 5%;
+    min-height: 8vh;
+  }
+  #menu_tag{
+    display: none;
+  }
+  .main_nav a{
+    color: black;
+  }
+  #logo{
+    color: black;
+    font-size: 1.7rem;
+  }
+  .main_nav div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .main_nav #register_a{
+    border: 2px dotted darkgray;
+    border-radius: 20px;
+    padding: 7px;
+    color: palevioletred;
+    transition: 0.3s ease;
+    /* font-weight: 600; */
+  }
+  .main_nav #register_a:hover{
+    border: 2px solid transparent;
+    background: palevioletred;
+    color: white;
+  }
+ 
+  .intro_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: space-between; */
+    width: 90%;
+  }
+  .intro_box_left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    width: 20%;
+    border-radius: 0 30px 30px 0;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    /* border: 1px solid black; */
+    padding: 0 5%;
+  }
+  .logo_2{
+    display: none;
+  }
+  .intro_box_left p{
+    font-size: 2.3rem;
+  }
+  .intro_box_left a{
+    background: palevioletred;
+    padding: 5px;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 5px;
+  }
+  .intro_box_right{ 
+    border-radius: 30px 0 0 30px;
+    width: 70%;
+  }
+  .intro_box_right_swiper{
+    width: 100%;
+    /* border: 1px solid red; */
+  }
+  .intro_box_right_swiper .swiper-slide{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 30px 0 0 30px;
+    background-size: cover;
+    background-position: center;
+    min-height: 75vh;
+  }
+  .intro_box_right_swiper .swiper-slide a{
+    background: black;
+    position: relative;
+    background: white;
+    margin-left: 5%;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .intro_box_right_swiper .swiper-slide a div{
+    position: absolute;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    height: 10px;
+    top: 0;
+    right: 0;
+    width: 10px;
+    transition: 0.5s ease;
+    background: palevioletred;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .intro_box_right_swiper .swiper-slide a:hover div{
+    scale: 40;
+  }
+  .intro_box_right_swiper .swiper-slide a strong{
+    z-index: 10;
+    transition: 0.5s ease;
+    font-size: 2rem;
+    color: rgb(122, 120, 120);
+  }
+  .intro_box_right_swiper .swiper-slide a:hover strong{
+    color: wheat;
+  }
+  .intro_box_right_swiper .swiper-slide a span{
+    transition: 0.5s ease;
+    z-index: 10;
+    display: flex;
+    color: palevioletred;
+    align-items: center;
+    /* justify-content: center; */
+  }
+  .intro_box_right_swiper .swiper-slide a:hover span{
+    color: white;
+  }
+  .intro_box_left{
+    min-height: 75vh;
+  }
+  @media all and (max-width:900px){
+    #menu_tag{
+      position: absolute;
+      display: flex;
+      top: 0;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 40px;
+      background: palevioletred;
+      color: #302d46;
+      color: wheat;
+      left: 100%;
+    }
+    .main_nav{
+      position: fixed;
+      top: 0;
+      left: -182px;
+      flex-direction: column;
+      align-items: center;
+      background: white;
+      z-index: 100;
+      gap: 1rem;
+      padding: 20px 20px;
+      border-radius: 0 0 10px 0;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      transition: 0.4s ease;
+      width: auto;
+    }
+    .main_nav #logo{
+      display: none;
+    }
+    .main_nav.change{
+      left: 0;
+    }
+    .main_nav div{
+      border-top: 1px dotted palevioletred;
+      padding: 10px 0;
+      border-bottom: 1px dotted palevioletred;
+      gap: 0.5rem;
+      flex-direction: column;
+    }
+    .intro_box{
+      flex-direction: column;
+      border-radius: 0;
+      width: 100%;
+      margin-top: 15vh;
+    }
+    .intro_box_right_swiper .swiper-slide{
+      border-radius: 0;
+      /* border-radius: 30px 0 0 30px; */
+      min-height: 55vh;
+    }
+    .intro_box_left{
+      border-radius: 0;
+      min-height: auto;
+      /* border: 1px solid black; */
+      display: flex;
+      align-items: center;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      min-height: 15vh;
+    }
+    .intro_box_left p{
+      font-size: 5vw;
+    }
+    .intro_box_left a{
+      border-radius: 0;
+      color: palevioletred;
+      border: 1px dashed palevioletred;
+      background: transparent;
+    }
+    .logo_2{
+      display: flex;
+    }
+    .intro_box_left,.intro_box_right{
+      width: 100%;
+      padding: 0;
+    }
+    .intro_box form{
+      min-height: auto;
+      position: revert;
+      width: 95%;
+      padding: 10px;
+    }
+    .intro_box form button{
+      height: auto;
+      padding: 10px;
+    }
+  }
+  @media all and (max-width:650px){
+    .intro_box form{
+      flex-direction: column;
+      width: auto;
+      gap: 1rem;
+      padding-bottom: 0;
+      padding: 0;
+    }
+    .intro_box form .input_field{
+      padding: 0 10px;
+    }
+    .intro_box form section{
+      gap: 0.5rem;
+      width: auto;
+      flex-direction: column;
+    }
+    .intro_box form button{
+      width: auto;
+      padding: 2px 5px;
+      border-radius: 0 0 10px 10px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+</style>
