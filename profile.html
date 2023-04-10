@@ -11,9 +11,9 @@
 <body>
   <section class="page">
     <ul class="progress_box">
-      <li style="color: rgb(212, 176, 108);">1. Create Account</li>
+      <li>1. Create Account</li>
       <hr>
-      <li>2. Set up Personal Info</li>
+      <li style="color: rgb(212, 176, 108);">2. Set up Personal Info</li>
       <hr>
       <li>3. Create Business Profile</li>
       <hr>
@@ -27,7 +27,7 @@
       }
       .progress_box{
         position: fixed;
-        left: 10%;
+        left: 1%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -58,22 +58,90 @@
       <form action="">
         <section class="header">
           <strong href="" id="logo">Pick&Hook</strong>
-          <small>Registration</small>
+          <small>Profile</small>
         </section>
         <section class="body">
-          <div class="input_field">
-            <span>Username</span>
-            <input type="text" name="username" placeholder="username" required>
-          </div>
-          <div class="input_field">
-            <span>Password</span>
-            <input type="text" name="password_1" placeholder="password" required>
-          </div>
-          <div class="input_field">
-            <span>Confirm Password</span>
-            <input type="text" name="password_2" placeholder="confirm password" required>
-          </div>
+          <section>
+            <div class="input_field">
+              <span>Gender</span>
+              <select name="gender" id="">
+                <option value="Not_specified">Not Specified</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="input_field">
+              <span>Sexual preference</span>
+              <select name="sexual_preference" id="">
+                <option value="Not_specified">Not Specified</option>
+                <option value="Straight">Straight</option>
+                <option value="Bi">Bi</option>
+                <option value="Lesbian">Lesbian</option>
+              </select>
+            </div>
+            <div class="input_field">
+              <span>Age</span>
+              <input type="text" name="age"  >
+            </div>
+            <div class="input_field">
+              <span>Ethnic Origin</span>
+              <input type="text" name="ethnic_origin"  >
+            </div>
+          </section>
+          <section>
+            <div class="input_field">
+              <span>Hobbies</span>
+              <input type="text" name="hobbies" placeholder="Seperate With comma(,)">
+            </div>
+            <div class="input_field">
+              <span>Tattoos</span>
+              <select name="tattoos" id="">
+                <option value="Not_specified">Not Specified</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="input_field">
+              <span>Smoke</span>
+              <select name="smoke" id="">
+                <option value="Not_specified">Not Specified</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="input_field">
+              <span>Shaved</span>
+              <select name="shaved" id="">
+                <option value="Not_specified">Not Specified</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            
+          </section>
+          <section>
+            <div class="input_field">
+              <span>Implants</span>
+              <input type="text" name="implants" placeholder="Seperate With comma(,)">
+            </div>
+            <div class="input_field">
+              <span>Piercings</span>
+              <input type="text" name="piercings" placeholder="Seperate With comma(,)">
+            </div>
+            <div class="input_field">
+              <span>Body Type</span>
+              <select name="body_type" id="">
+                <option value="Not_specified">Not Specified</option>
+                <option value="Slim">Slim</option>
+                <option value="Slim-thick">Slim-Thick</option>
+                <option value="Average">Average</option>
+                <option value="Thick">Thick</option>
+              </select>
+            </div>
+          </section>
         </section>
+
         <button type="submit">
           <span>Proceed</span>
         </button>
@@ -121,11 +189,12 @@
     z-index: 20;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     width: auto;
-    width: 300px;
+    /* width: 300px; */
     padding: 20px;
     gap: 2rem;
   }
@@ -146,20 +215,26 @@
 
   form .body{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 2rem;
   }
+  form .body section{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
   form .input_field{
+    width: 280px;
     display: flex;
     flex-direction: column;
   }
   form .input_field input{
-    padding: 10px;
-    font-size: 1.1rem;
+    padding: 5px;
+    font-size: 0.9rem;
     border-bottom: 1px solid darkgray;
   }
-  form .input_field input::placeholder{
-    color: white;
+  form input::placeholder{
+    font-size: 0.8rem;
   }
   form button{
     width: auto;
@@ -175,7 +250,7 @@
   }
 
 
-  @media all and (max-width:1200px){
+  @media all and (max-width:1300px){
     #info_tag{
       position: absolute;
       display: flex;
@@ -203,6 +278,12 @@
     .progress_box.change{
       left: 0;
     }
+    .form_box{
+      margin-top: 5vh;
+    }
+    form .body{
+      flex-direction: column;
+    }
   }
   @media all and (max-width:650px){
     .image_box{
@@ -223,6 +304,10 @@
   @media all and (max-width:300px){
     form{
       max-width: 220px;
+      min-width: 220px;
+    }
+    form .input_field{
+      width: 95%;
     }
   }
 </style>
